@@ -1,0 +1,22 @@
+# Node modules (always ignore)
+node_modules/
+
+# Parcel cache (used for fast rebuilds)
+.cache/
+
+# Dist folder (Parcel output – can be built again)
+dist/
+
+# Environment variables (secret API keys, etc.)
+.env
+
+# OS-specific files
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional:
+.parcel-cache/
