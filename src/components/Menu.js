@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RestroCard from "./RestroCard";
 import { SWIGGY_URL } from "../utils/Data";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -87,7 +88,9 @@ const Menu = () => {
           <h2>No restaurants found.</h2>
         ) : (
           filteredRes.map((data) => (
-            <RestroCard key={data.info.id} resData={data} />
+            <Link to={"/restaurants/" + data.info.id} key={data.info.id}>
+              <RestroCard resData={data} />
+            </Link>
           ))
         )}
       </div>

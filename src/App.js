@@ -9,6 +9,7 @@ import { BrowserRouter, createBrowserRouter, Outlet, Router, RouterProvider } fr
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
+import RestroMenu from "./components/RestroMenu";
 
 
 const App = () => {
@@ -31,16 +32,20 @@ const appLayout = createBrowserRouter([
                 element:<Menu/>
             },
             {
-                path: "about",
+                path: "/about",
                 element:<About/>
             },
             {
-                path: "contact",
+                path: "/contact",
                 element:<Contact/>
             },
             {
-                path: "error",
+                path: "/error",
                 element:<Error/>
+            },
+            {
+                path: "/restaurants/:resId",
+                element:<RestroMenu/>
             },
         ],
         errorElement:<Error/>
